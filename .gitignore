@@ -108,3 +108,6 @@ dist
 
 # DS_Store mac
 .DS_Store
+
+# Prettier setup file
+.prettierrc
