@@ -177,7 +177,7 @@
                   <p class="card-text">
                     audio://minimalSynth/minimalWave/dubTronic/eccentricElectronica
                     /minister<br />
-                    visuals://kalkattack<br />
+                    visuals://kalkattak<br />
                     11. Mülheimer Nacht<br />
                     Atelier Reissweber Pellenz Sturm<br />
                     Düsseldorfer Strasse 129<br />
@@ -223,7 +223,7 @@
                   >Playlist</a
                 >
               </p>
-              <div class="collapse mb-3" id="rheinradio-playlist">
+              <div class="collapse fade mb-3" id="rheinradio-playlist">
                 <div class="card card-body pl-2 text-left">
                   Track 1<br />
                   Track 2 <br />
@@ -427,7 +427,54 @@
       <div class="row">
         <div class="col-sm-2">&nbsp;</div>
         <div class="col-sm-8">
-          <h4 class="mx-auto text-center">Simon Schubert - Dämmerfluchten</h4>
+          <h3 class="mx-auto text-center">KALKATTAK - ASEN3 (Trailer)</h3>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://player.vimeo.com/video/6817333"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+        </div>
+        <div class="col-sm-2">&nbsp;</div>
+      </div>
+      <div class="row">
+        <div class="col-sm2">&nbsp;</div>
+        <div class="col-sm8 mt-5 mx-auto text-center">
+          <div id="beckett" class="card mb-3 mx-auto">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img
+                  src="resources/img/samuelBeckett.jpg"
+                  class="img-fluid"
+                  alt="Samuel Beckett"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Samuel Beckett</h5>
+                  <p class="card-text">
+                    Scheitern. <br />Noch mal scheitern. <br />Besser scheitern.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"></small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm2">&nbsp;</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">&nbsp;</div>
+        <div class="col-sm-8">
+          <h3 class="mx-auto text-center mt-4">
+            Simon Schubert - Dämmerfluchten
+          </h3>
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
               width="560"
@@ -437,7 +484,6 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            <hr />
           </div>
         </div>
         <div class="col-sm-2">&nbsp;</div>
@@ -463,6 +509,7 @@
                 type="email"
                 class="form-control"
                 id="email"
+                name="email"
                 placeholder="Email"
                 required
               />
@@ -474,6 +521,7 @@
                 id="music-style"
                 multiple
                 size="10"
+                name="style[]"
                 required
               >
                 <option value="">Wähle einen oder mehrere Styles</option>
@@ -488,9 +536,15 @@
                 <option>Afro Beatz</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="location">Location</label>
-              <select class="form-control" id="location" required>
+              <select
+                class="form-control"
+                name="location"
+                id="location"
+                required
+              >
                 <option value="">Wähle eine Location</option>
                 <option>Museum</option>
                 <option>Galerie/Kunstverein</option>
@@ -501,7 +555,12 @@
             </div>
             <div class="form-group">
               <label for="message">Nachricht</label>
-              <textarea class="form-control" id="message" rows="3"></textarea>
+              <textarea
+                class="form-control"
+                name="message"
+                id="message"
+                rows="3"
+              ></textarea>
               <div class="form-group mt-2">
                 <button type="submit" class="btn btn-danger">
                   Send da noize!
