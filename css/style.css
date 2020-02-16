@@ -1,0 +1,69 @@
+#logo {
+  font-family: 'Monoton', cursive;
+  font-size: 3.4rem;
+  color: #e89da1;
+  /*color: #fff;*/
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+em {
+  font-style: normal;
+}
+nav ul li a:link {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.nav-link:focus,
+.nav-link:hover,
+.nav-item > .active {
+  color: rgba(255, 255, 255, 1) !important;
+  /*text-decoration: underline !important;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);*/
+}
+.card-text {
+  font-size: 1rem;
+}
+nav ul li {
+  padding-right: 2rem;
+}
+label {
+  padding-left: 1rem;
+}
+main {
+  margin-top: 8%;
+}
+h2::before {
+  display: block;
+  content: ' ';
+  margin-top: -150px;
+  height: 150px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    margin-top: 24%;
+  }
+  #logo {
+    font-size: 2.5rem;
+  }
+}
