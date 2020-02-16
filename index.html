@@ -23,12 +23,13 @@
     <style>
       #logo {
         font-family: 'Monoton', cursive;
-        font-size: 3.3rem;
+        font-size: 3.4rem;
         color: #e89da1;
         /*color: #fff;*/
       }
       body {
         font-family: 'Courier New', Courier, monospace;
+        position: relative;
       }
       h1 {
         font-size: 1.6rem;
@@ -47,11 +48,18 @@
       }
       nav ul li a:link {
         font-size: 1.4rem;
-        color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.6) !important;
       }
       .nav-link:focus,
-      .nav-link:hover {
+      .nav-link:hover,
+      .nav-item > .active {
         color: rgba(255, 255, 255, 1) !important;
+        /*text-decoration: underline !important;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);*/
       }
       .card-text {
         font-size: 1rem;
@@ -62,12 +70,43 @@
       label {
         padding-left: 1rem;
       }
+      main {
+        margin-top: 8%;
+      }
+      h2::before {
+        display: block;
+        content: ' ';
+        margin-top: -150px;
+        height: 150px;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      @media only screen and (max-width: 480px) {
+        main {
+          margin-top: 24%;
+        }
+        #logo {
+          font-size: 2.5rem;
+        }
+      }
     </style>
   </head>
-  <body class="mx-auto" style="width:90%">
+  <body
+    class="mx-auto"
+    data-spy="scroll"
+    data-target="#minister-nav"
+    data-offset="50"
+    style="width:90%"
+  >
     <header>
-      <nav class="navbar navbar-expand-sm navbar-light bg-danger">
-        <a class="navbar-brand" href="#"><div id="logo">minister</div></a>
+      <nav
+        class="navbar navbar-expand-sm navbar-light bg-danger mx-auto fixed-top"
+        style="width:90%"
+      >
+        <a class="navbar-brand nav-link" href="#"
+          ><div id="logo">minister</div></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -83,9 +122,9 @@
           class="collapse navbar-collapse border-top border-bottom border-light mt-3 mb-3 pt-3 pb-3"
           id="navbarNav"
         >
-          <ul class="navbar-nav text-white">
-            <li class="nav-item active">
-              <a class="nav-link text-white" href="#future">future</a>
+          <ul id="minister-nav" class="navbar-nav text-white">
+            <li class="nav-item">
+              <a class="nav-link text-white active" href="#future">future</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#noise">noise + lovesongs</a>
@@ -105,7 +144,7 @@
         </div>
       </nav>
     </header>
-    <main class="border">
+    <main class="border bg-light">
       <div class="row" id="subtitle">
         <div class="col-sm">
           <h1 class="mx-auto mt-4 text-center" style="width:90%">
@@ -219,59 +258,63 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-sm-12 mt-4">
             <hr />
-            <h2 class="mx-auto text-center mt-4 text-danger">
+            <h2 id="noise" class="mx-auto text-center mt-4 text-danger">
               noise + lovesongs
             </h2>
           </div>
         </div>
+
         <div class="row mx-auto">
-          <div class="col-sm-3">&nbsp;</div>
-          <div class="col-sm-6 mt-4 mb-4 text-center">
-            <h3 mb-10 id="noise">rhein radio fm674</h3>
-            <div class="embed-responsive embed-responsive-4by3">
+          <div class="col-sm-2">&nbsp;</div>
+          <div class="col-sm-8 mt-2 text-center">
+            <h3 id="radioFm674">
+              fm674 zu gast in der sendung rhein 10.02.2020
+            </h3>
+            <div>
               <iframe
-                width="400"
-                height="auto"
-                src="https://www.mixcloud.com/widget/iframe/?light=1&feed=%2Fhegelx%2Frheinradio-fm671-2020-10-10%2F"
+                width="100%"
+                height="120"
+                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fhegelx%2Frheinradio-fm671-2020-10-10%2F"
                 frameborder="0"
               ></iframe>
             </div>
           </div>
-          <div class="col-sm-3">&nbsp;</div>
+          <div class="col-sm-2">&nbsp;</div>
         </div>
-        <div class="row mx-auto" style="max-width:50%">
-          <div class="col-sm-3">&nbsp;</div>
-          <div class="col-sm-6 mt-3 text-center">
+        <div class="row mx-auto">
+          <div class="col-sm-2">&nbsp;</div>
+          <div class="col-sm-8 mt-2 text-center">
             <h3 id="typical-girls">typical girls selection</h3>
             <div>
               <iframe
                 width="100%"
-                height="60"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fhegelx%2Fminister-001-typical-girls-selection-07072018%2F"
+                height="120"
+                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fhegelx%2Fminister-001-typical-girls-selection-07072018%2F"
                 frameborder="0"
               ></iframe>
             </div>
           </div>
-          <div class="col-sm-3">&nbsp;</div>
+          <div class="col-sm-2">&nbsp;</div>
         </div>
-        <div class="row mx-auto" style="max-width:50%">
-          <div class="col-sm-3">&nbsp;</div>
-          <div class="col-sm-6 mt-3 mb-4 text-center">
+        <div class="row mx-auto">
+          <div class="col-sm-2">&nbsp;</div>
+          <div class="col-sm-8 mt-2 mb-4 text-center">
             <h3 id="bibblyotek">bibbly o tek mix</h3>
             <div>
               <iframe
                 width="100%"
-                height="60"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fhegelx%2Fbibbly-o-tek-mix%2F"
+                height="120"
+                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fhegelx%2Fbibbly-o-tek-mix%2F"
                 frameborder="0"
               ></iframe>
             </div>
           </div>
         </div>
-        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-2">&nbsp;</div>
       </div>
       <div class="row">
         <div class="col-sm">
@@ -415,7 +458,7 @@
       <div class="row">
         <div class="col-sm-4">&nbsp;</div>
         <div class="col-sm-4">
-          <p>Bring Da Noize To Your House!</p>
+          <p class="pl-3">Bring Da Noize To Your House!</p>
           <form action="">
             <div class="form-group">
               <label for="email">Email</label>
