@@ -73,4 +73,7 @@ h2::before {
   #logo {
     font-size: 2.5rem;
   }
+  #beckett.card {
+    max-width: 80%;
+  }
 }
