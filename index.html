@@ -32,7 +32,7 @@
     <header>
       <nav
         class="navbar navbar-expand-sm navbar-light bg-danger mx-auto fixed-top"
-        style="width:90%; min-height:22%"
+        style="width:90%;"
       >
         <a class="navbar-brand nav-link" href="#"
           ><div id="logo">minister</div></a
@@ -48,10 +48,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse border-top border-bottom border-light mt-3 mb-3 pt-3 pb-3"
-          id="navbarNav"
-        >
+        <div class="collapse navbar-collapse  mt-3 mb-3 p-3" id="navbarNav">
           <ul id="minister-nav" class="navbar-nav text-white">
             <li
               class="nav-item"
@@ -292,7 +289,7 @@
         </div>
         <div class="row mx-auto">
           <div class="col-sm-2">&nbsp;</div>
-          <div class="col-sm-8 mt-2 mb-4 text-center">
+          <div class="col-sm-8 mt-2 text-center">
             <h3 id="bibblyotek">bibbly o tek mix</h3>
             <div>
               <iframe
@@ -301,7 +298,7 @@
                 src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fhegelx%2Fbibbly-o-tek-mix%2F"
                 frameborder="0"
               ></iframe>
-              <p class="text-left pl-1 mb-3">
+              <p class="text-left" style="position:relative; z-index:99">
                 <a
                   class="link"
                   data-toggle="collapse"
@@ -310,7 +307,7 @@
                   >Playlist</a
                 >
               </p>
-              <div class="collapse mb-3" id="bibb-playlist">
+              <div class="collapse" id="bibb-playlist">
                 <div class="card card-body pl-2 text-left">
                   Track 1<br />
                   Track 2 <br />
@@ -325,11 +322,11 @@
         <div class="col-sm-2">&nbsp;</div>
       </div>
       <div class="row hr-width mx-auto">
-        <div class="col-sm mt-5"><hr /></div>
+        <div class="col-sm"><hr /></div>
       </div>
       <div class="row">
         <div class="col-sm">
-          <h2 id="past" class="mx-auto mt-3 text-center text-danger">past</h2>
+          <h2 id="past" class="mx-auto  text-center text-danger">past</h2>
         </div>
       </div>
       <div class="row">
@@ -682,5 +679,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="js/removeClass.js"></script>
   </body>
 </html>
