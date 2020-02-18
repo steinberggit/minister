@@ -1,8 +1,12 @@
-const deviceSize = 480
+// breakpoint sm bootstrap
+const breakpoint = '540px'
 
-const removeToggle = size =>
-  window.screen.width > size
+const viewportSize = window.matchMedia('(min-width:' + breakpoint + ')')
+
+const removeToggle = viewportSize =>
+  viewportSize.matches
     ? document.querySelectorAll('li').forEach(li => (li.dataset.toggle = ''))
     : false
 
-removeToggle(deviceSize)
+removeToggle(viewportSize)
+viewportSize.addListener(removeToggle)
